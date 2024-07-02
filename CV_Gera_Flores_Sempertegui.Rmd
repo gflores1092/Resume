@@ -2,17 +2,17 @@
 docname: Curriculum Vitae
 name: |
   | \huge Gera Flores Sempertegui
-profilepic: "/Users/gerardoflores/Documents/CV_Gera_Flores_Sempertegui/resumes/foto_yera.png"
+profilepic: "foto.png"
 position: |
-  | \scriptsize E-commerce | Customer Experience | Commercial | Operations | Data Science
+  | \scriptsize Data Analytics | Data Science | Machine Learning | Business Intelligence
 address: |
-  | \normalfont\scriptsize\faMapMarker\hspace{0.1cm}{\scriptsize San Martin 590, Miraflores, Lima, Perú}
+  | \normalfont\scriptsize\faMapMarker\hspace{0.1cm}{\scriptsize San Martin 590, Miraflores, Lima, Peru}
 phone: (+51) 948425000
 email: "gflores1092@gmail.com"
 linkedin: gflores1092
 github: gflores1092
 aboutme: |
-  | \normalfont{Líder ejecutiva con más de 10 años de trayectoria en e-commerce, tecnología y startups. Experiencia en servicio al cliente, comercial, operaciones, logística y data science. Preparada para roles de alta dirección, liderazgo de equipos grandes, comprometida con la innovación y crecimiento en entornos dinámicos.}
+  | \normalfont{Professional with over 10 years of work experience in the e-commerce, technology and startup industries. Expertise in data analytics, data science, business intelligence and machine learning. Prepared for highly technical positions, able to work under pressure and with an startup based work ethic.}
 ##www: gflores1092.carrd.co
 headcolor: 414141
 output: 
@@ -27,7 +27,7 @@ header-includes:
   - \definecolor{awesome}{HTML}{0066CC}
   - \definecolor{text}{HTML}{0066CC}
   - \usepackage{graphicx}
-  - \newcommand{\profilepic}{\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{/Users/gerardoflores/Documents/CV_Gera_Flores_Sempertegui/resumes/foto_yera.png}}
+  - \newcommand{\profilepic}{\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{foto.png}}
 ---
 
 ```{r setup, include=FALSE}
@@ -39,7 +39,7 @@ library(tidyverse)
 
 ```{r}
 # Select the language (English or Spanish)
-lang <- "Spanish"  # Change to "Spanish" for the Spanish version
+lang <- "Remote"  # Change to "Spanish" for the Spanish version
 ```
 
 ```{r}
@@ -299,33 +299,35 @@ remote_companies <- c(
 remote_bullets <- c(
   
   #[1]
-  "Lideré un equipo de 30 personas responsable del soporte logístico y comercial para Falabella MKP, Linio y Falabella.com.",
-  "Supervisé el proyecto de migración de programas heredados y marketplaces de Falabella y Linio a Falabella.com.",
-  "Impulsé la estandarización de procesos operativos durante la migración, aumentando el NPS y los resultados comerciales.",
-  "Gestioné la reingeniería del proceso de logística inversa, maximizando los recursos y reduciendo el tiempo y los costos.",
-  "Rediseñé los procesos financieros (por ejemplo, liquidaciones), mejorando la gestión de cuentas y la resolución de consultas.",
-  "Diseñé flujos de trabajo (por ejemplo, entradas, liquidaciones, finanzas, devoluciones) que resultaron en mejoras de tiempo de hasta el 80.",
+  "Led an operational excellence team, achieving 25\\% operational efficiency through predictive models in Python.",
+  "Increased CSAT by 20\\% and NPS by 15\\% with projects such as a Machine Learning recommendation system in Python.",
+  "Standardized processes across marketplaces, reducing processing time by 30\\% using Apache Airflow and SQL.",
+  "Developed Google Cloud, BigQuery, and TensorFlow solutions, cutting operational costs by 25\\% with real-time analytics.",
+  "Improved orders planning and delivery time with a ML classification system for product sizes with TensorFlow.",
+  "Enhanced team collaboration with automated R and Python reporting, improving project delivery time by 15\\%.",
+  "Integrated data-driven operations with Shiny dashboards, increasing efficiency by 40\\% and productivity by 50\\%.",
   
   #[2]
-  "Lideré un equipo de 5 personas responsable de la mejora operativa y las estrategias de crecimiento en 15 ciudades.",
-  "Gestioné planes de optimización para métricas operativas basadas en parámetros, indicadores y desarrollos.",
-  "Diseñé flujos de trabajo (por ejemplo, automatizaciones, pipelines de ML) para el análisis de datos y la toma de decisiones basada en datos.",
-  "Supervisé proyectos para mejorar diversas métricas (por ejemplo, tiempos de entrega, cancelaciones, pronósticos) en hasta un 30.",
-  "Supervisé proyectos para mejorar diversas métricas (por ejemplo, tiempos de entrega, cancelaciones, pronósticos) en hasta un 30.",
+  "Increased on-time deliveries by 30\\% with optimized demand prediction models in SQL and Python.",
+  "Reformulated strategies, reducing delivery times and optimizing resources with R and Python automations.",
+  "Developed predictive models with TensorFlow and automations, improving fleet availability management by 25\\%.",
+  "Implemented machine learning models for demand forecasting, enhancing resource allocation and efficiency.",
+  "Optimized service areas and routes based on data, increasing delivery efficiency by 30\\% using Python.",
   
   #[3]
-  "Lideré un equipo de 5 personas responsable de desarrollar estrategias de crecimiento (por ejemplo, alianzas, conocimiento de usuarios).",
-  "Diseñé proyectos de expansión, campañas de marketing y planes de adquisición, conversión y retención de usuarios.",
-  "Desarrollé flujos de trabajo (por ejemplo, embudo de usuarios, interacciones, transacciones) para generar estrategias de crecimiento.",
-  "Lideré proyectos (por ejemplo, promociones, geomarketing) que aumentaron el crecimiento de usuarios en un 20 y el crecimiento de pedidos en un 35.",
-  "Lideré proyectos (por ejemplo, promociones, geomarketing) que aumentaron el crecimiento de usuarios en un 20 y el crecimiento de pedidos en un 35.",
-  
-  #[4]
-  "Lideré un equipo de 3 personas responsable del desarrollo de iniciativas analíticas a nivel local y regional.",
-  "Responsable de la gestión analítica (por ejemplo, paneles, conocimientos, consultas, automatizaciones, modelos) de la empresa.",
-  "Gestioné planes de mejora de indicadores y resultados operativos, comerciales, financieros, de ventas y marketing.",
-  "Lideré proyectos (por ejemplo, reducción de fraude, análisis de precios) maximizando el uso de recursos y minimizando las pérdidas."
+  "Responsible of customer acquisition and churn analysis, reducing churn by 20\\% with data-driven recommendations.",
+  "Executed targeted campaigns, increasing revenue by 20\\% and average ticket size by 10\\% using predictive analytics.",
+  "Established strategic partnerships, driving growth and expansion through data insights based on Market Basket Analysis.",
+  "Improved UX and user engagement by 25\\%, optimizing the customer journey with advanced analytics.",
+  "Boosted conversion rates by 15\\% with personalized marketing strategies and machine learning models.",
     
+  #[4]
+  "Led a team of Data Analysts and BI specialists, developing actionable insights through data science projects.",
+  "Directed fraud detection and data monetization projects, reducing losses by 15\\% and increasing revenue by 20\\%.",
+  "Implemented dynamic pricing strategies based on demand, increasing revenue by 10\\% with machine learning.",
+  "Developed real-time analytical dashboards, improving decision-making efficiency by 30\\% using SQL and Python.",
+  "Enhanced data-driven decision-making, optimizing operational and financial metrics through advanced analytics."
+      
 )
 ```
 
@@ -382,10 +384,10 @@ english_degrees <- tribble(
 
 english_certifs <- tribble(
   ~degree, ~start, ~end, ~institution, ~location, ~link,
-  "Google Data Analytics", 2021, 2021, "GOOGLE", "Online", "",
-  "Google Project Management", 2021, 2021, "GOOGLE", "Online", "",
-  "Deep Learning Specialization", 2020, 2020, "DEEPLEARNING.AI", "Online", "",
-  "Data Management and Analytics", 2016, 2016, "CENTRUM CATOLICA", "Lima, Perú",""
+    "Google Data Analytics", 2021, 2021, "GOOGLE", "Online", "",
+    "Google Project Management", 2021, 2021, "GOOGLE", "Online", "",
+    "Deep Learning Specialization", 2020, 2020, "DEEPLEARNING.AI", "Online", "",
+    "Data Management and Analytics", 2016, 2016, "CENTRUM CATOLICA", "Lima, Perú",""
 )
 
 english_skills <- tribble(~type, ~skill,
@@ -402,11 +404,11 @@ english_skills <- tribble(~type, ~skill,
 )
 
 english_hobbies <- tribble(~description,
-        "Siempre estoy con actitud positiva y optimista, me encanta transmitir energías positivas con las personas que me rodean.",
-        "Defensora de la Diversidad, Equidad e Inclusión (DEI) en el trabajo y comunidad por medio de liderazgo inclusivo.",
-        "Suelo caminar grandes distancias con un promedio de 10k pasos diarios los últimos 18 meses.",
-        "Me encanta viajar y conocer nuevas culturas, he tenido la oportunidad de visitar 25 países y .",
-        "Apasionada por la historia y geografía."
+        "I always maintain a positive and optimistic attitude, and I love to share positive energy with those around me.",
+        "I participate in Diversity, Equity, and Inclusion (DEI) causes at work and in the community through inclusive leadership.",
+        "I love to travel and experience new cultures, having had the opportunity to visit 25 countries and live abroad.",
+        "I typically walk a lot, averaging 10,000 steps daily for the past 18 months, and I maintain an active lifestyle.",
+        "I am fascinated by history and enjoy learning about historical events, ancient civilizations, and visiting museums."
 )
 
 # Remote
@@ -421,31 +423,31 @@ remote_degrees <- tribble(
 
 remote_certifs <- tribble(
   ~degree, ~start, ~end, ~institution, ~location, ~link,
-  "Google Data Analytics", 2021, 2021, "GOOGLE", "Online", "",
-  "Google Project Management", 2021, 2021, "GOOGLE", "Online", "https://www.coursera.org/account/accomplishments/specialization/certificate/2QSCV3TX95QL",
-  "Especialización en Deep Learning", 2020, 2020, "DEEPLEARNING.AI", "Online", "https://www.coursera.org/account/accomplishments/certificate/EGTKWSPUXP7W",
-  "Analítica de Negocios y Gestión de la Información", 2016, 2016, "CENTRUM CATOLICA", "Lima, Perú",""
+    "Google Data Analytics", 2021, 2021, "GOOGLE", "Online", "",
+    "Google Project Management", 2021, 2021, "GOOGLE", "Online", "",
+    "Deep Learning Specialization", 2020, 2020, "DEEPLEARNING.AI", "Online", "",
+    "Data Management and Analytics", 2016, 2016, "CENTRUM CATOLICA", "Lima, Perú",""
 )
 
 remote_skills <- tribble(~type, ~skill,
-        "Idiomas", "Inglés, Español, Portugués",
-        "Data Science / Machine Learning", "R, Python, SQL",
-        "Diseño / Desarrollo Web", "HTML, CSS, Javascript, PHP, WordPress",
+        "Languages", "English, Spanish, Portuguese",
+        "Data Science / Machine Learning", "SQL, R, Python (Keras / Tensorflow)",
+        "Web Design / Development", "HTML, CSS, Javascript, PHP, WordPress",
         "IDEs", "Visual Studio Code, RStudio, Google Colab, Jupyter Notebooks",
-        "Herramientas colaborativas", "Google Docs, Trello, Asana, Slack, Teams",
-        "Herramientas de visualización", "Looker, Tableau, Data Studio, Power BI",
-        "Herramientas CRM / Soporte", "Salesforce, Freshdesk, Jira, Kustomer",
-        "Bases de datos", "MySQL, Amazon Redshift, BigQuery",
-        "Otros", "Docker, Git, Spark, Regex, LaTeX, Markdown, Visual Basic, DAX",
-        "ERPs", "SAP, Oracle",
+        "Collaborative tools", "Google Docs, Trello, Asana, Slack, Teams",
+        "Visualization tools", "Looker, Tableau, Data Studio, Power BI",
+        "CRM / Support tools", "Salesforce, Freshdesk, Jira, Kustomer",
+        "Cloud computing", "Google Cloud, Amazon Web Services, Microsoft Azure",
+        "Others", "Docker, Git, Kubernetes, Airflow, Spark, Regex, LaTeX, Markdown, Visual Basic, DAX",
+        "ERPs", "SAP, Oracle"
 )
 
 remote_hobbies <- tribble(~description,
-        "Siempre estoy con actitud positiva y optimista, me encanta transmitir energías positivas con las personas que me rodean.",
-        "",
-        "Me encanta viajar y conocer nuevas culturas, he tenido la oportunidad de visitar 25 países y vivir en el extranjero.",
-        "Suelo caminar mucho con un promedio de 10k pasos diarios los últimos 18 meses y mantener una vida activa.",
-        "Apasionada por la historia y geografía."
+        "I always maintain a positive and optimistic attitude, and I love to share positive energy with those around me.",
+        "I participate in Diversity, Equity, and Inclusion (DEI) causes at work and in the community through inclusive leadership.",
+        "I love to travel and experience new cultures, having had the opportunity to visit 25 countries and live abroad.",
+        "I typically walk a lot, averaging 10,000 steps daily for the past 18 months, and I maintain an active lifestyle.",
+        "I am fascinated by history and enjoy learning about historical events, ancient civilizations, and visiting museums."
 )
 
 ```
