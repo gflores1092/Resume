@@ -1,0 +1,918 @@
+---
+docname: Curriculum Vitae
+name: |
+  | \huge\textbf{Gera Flores Sempertegui}
+profilepic: "foto.png"
+position: |
+  | \scriptsize INDUSTRIAL ENGINEER MBA | E-COMMERCE | MANAGEMENT | TECHNOLOGY | DATA SCIENCE 
+address: |
+  | \normalfont\scriptsize\faMapMarker\hspace{0.1cm}{\scriptsize San Martin 590, Miraflores, Lima, Peru}
+phone: (+51) 948425000
+email: "gflores1092@gmail.com"
+linkedin: gflores1092
+#github: gflores1092
+aboutme: |
+  | \normalfont{Executive leader with over 10 years of experience in e-commerce, technology, and startups. Expert in management and commercial operations with strong technical skills. Prepared for senior management roles, capable of leading large teams, and committed to innovation and growth in dynamic environments. Recognized as a data driven professional with high impact projects and initiatives.}
+# | \normalfont{Executive leader with over 10 years of experience in e-commerce, technology, and startups. Expert in management and commercial operations with strong technical skills. Prepared for senior management roles, capable of leading large teams, and committed to innovation and growth in dynamic environments. Recognized as a data driven professional with high impact projects and initiatives.}
+##www: gflores1092.carrd.co
+headcolor: 414141
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+always_allow_html: yes
+header-includes:
+  - \usepackage{parskip}
+  - \usepackage{ragged2e}
+  - \usepackage{changepage}
+  - \usepackage{setspace}
+  - \definecolor{awesome}{HTML}{0066CC}
+  - \definecolor{text}{HTML}{0066CC}
+  - \usepackage{graphicx}
+  - \newcommand{\profilepic}{\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{foto.png}}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+library(vitae)
+library(xtable)
+library(tidyverse)
+```
+
+```{r}
+# Select the language (English or Spanish)
+lang <- "English"  # Change to "Spanish" for the Spanish version
+```
+
+```{r}
+
+# Functions
+
+#tabular function
+tabular <- function(tbl,
+                    digits = 0,
+                    include.colnames = FALSE,
+                    include.rownames = FALSE,
+                    hline.after = NULL,
+                    size = getOption("xtable.size", NULL),
+                    add.to.row = getOption("xtable.add.to.row", NULL),
+                    ...)
+                    {
+                      tbl <- tbl %>%
+                             mutate_all(
+                               ~ if_else(
+                                    . == "\\tiny", 
+                                    "\\vspace{-0.20cm}", 
+                                   paste("\\vspace{0.025cm}\\parbox{18cm}{", ., "}")
+                                        )
+                                   )
+                    
+                      tbl %>%
+                        xtable(digits = digits, ...) %>%
+                        print(include.colnames = include.colnames,
+                              include.rownames = FALSE,
+                              hline.after = hline.after,
+                              comment = FALSE,
+                              latex.environments = NULL,
+                              floating = FALSE,
+                              size = size,
+                              add.to.row = add.to.row,
+                              sanitize.text.function = function(x) {x}
+                        )
+                    }
+
+# section function
+section_title <- "\\hspace{0.25cm}\\color{black}{\\Large\\faInfoCircle}\\hspace{0.25cm}\\section{" 
+
+# title function
+title <- function(text, link = "") {
+  if (link != "") {
+    return(paste0("\\href{", link, "}{\\normalsize\\textbf{", text, "}}\\hfill"))
+  } else {
+    return(paste0("\\normalsize\\textbf{", text, "}\\hfill"))
+  }
+}
+
+# company function
+company <- function(text) {
+  paste0("\\footnotesize{", text, "}\\hfill")
+}
+
+# bullet function
+bullet <- function(text) {
+  paste0("\\raisebox{+0.2\\height}{\\tiny\\faCircle}\\hspace{0.15cm}\\small{", text, "}\\hfill")
+}
+
+# location function
+location <- function(text) {
+  paste0("\\hfill\\scriptsize\\faMapMarker\\hspace{0.10cm}\\emph{", text, "}\\hfill")
+}
+
+# calendar function
+calendar <- function(text) {
+  paste0("\\hfill\\scriptsize\\faCalendarCheckO\\hspace{0.05cm}", text, sep="")
+}
+
+# word function
+word <- function(text) {
+  paste0("\\hfill\\small{", text, "}")
+}
+
+# paragraph function
+paragraph <- function(text) {
+  paste0("\\small{", text, "}\\hfill")
+}
+
+```
+
+```{r}
+
+# Spanish
+
+spanish_sections <- c(
+                    "Resumen", 
+                    "Experiencia", 
+                    "Educación",
+                    "Certificados",
+                    "Proyectos destacados",
+                    "Habilidades técnicas",
+                    "Habilidades blandas",
+                    "Información adicional"
+                    )
+
+# English
+
+english_sections <- c(
+                    "Summary", 
+                    "Experience", 
+                    "Education",
+                    "Certifications",
+                    "Featured projects",
+                    "Hard skills",
+                    "Soft skills",
+                    "Interests"
+                    )
+# Remote
+
+remote_sections <- c(
+                    "Summary", 
+                    "Experience", 
+                    "Education",
+                    "Certifications",
+                    "Featured projects",
+                    "Hard skills",
+                    "Soft skills",
+                    "Interests"
+                    )
+
+```
+
+```{r}
+
+# Spanish
+
+spanish_summary <- c(
+  "Líder ejecutiva con 10 años de trayectoria en los sectores de e-commerce, tecnología y startups. Destaco en áreas como operaciones, logística, marketing, finanzas y data science. Con habilidades analíticas avanzadas y alta capacidad para la toma de decisiones basadas en datos. Experiencia en liderazgo de equipos interfuncionales de hasta 30 personas. Preparada para asumir roles de alta dirección, con el compromiso de fomentar la innovación, crecimiento, excelencia y éxito empresarial."
+)
+
+# English
+
+english_summary <- c(
+  "Accomplished executive leader with 10 years of diverse experience in e-commerce, technology, and startups. Proficient in operations, logistics, marketing, finance and data science. Strong analytical skills, adept at data-driven decision-making and experienced in leading cross-functional teams of up to 25. Ready for senior management roles, poised to drive innovation, growth, excellence and business success."
+)
+
+# Remote
+
+remote_summary <- c(
+  "Profesional con 10 años de experiencia gestionando equipos de hasta 25 personas en áreas como data analytics, operaciones, logística y marketing en industrias como e-commerce, tecnología, telecomunicaciones y minería. Alta capacidad analítica, entusiasta sobre nuevas tecnologías y herramientas y generalmente autodidacta en habilidades técnicas. Amplia experiencia en manejo de personas, con foco en el crecimiento personal, profesional y desarrollo de habilidades blandas."
+)
+
+```
+
+```{r}
+
+# Spanish
+
+spanish_titles <- c(
+                    "Head of Operations", 
+                    "Logistics Performance Manager", 
+                    "Growth Marketing Lead", 
+                    "Analytics Lead"
+                    )
+
+spanish_companies <- c(
+                      "FALABELLA.COM", 
+                      "PEDIDOSYA", 
+                      "GLOVO", 
+                      "GLOVO"
+                      )
+
+spanish_bullets <- c(
+  
+  #[1]
+  "Lideré un equipo de 30 personas responsable de la logística, analítica, finanzas y soporte comercial a clientes y vendedores.",
+  "Estandaricé y optimicé procesos operativos en Falabella, Tottus, Sodimac y Linio, mejorando la eficiencia operativa en 20\\%.",
+  "Impulsé la experiencia de clientes y sellers, aumentando el CSAT en 15\\% y NPS en 20\\% con estrategias customer centric.",
+  "Lideré iniciativas comerciales y capacitaciones para eventos como Cyber Days logrando impactos en ventas hasta en 15\\%.",
+  "Diseñé, ejecuté y automaticé la estrategia de recuperación de cuentas por cobrar recuperando hasta S/. 8 millones.",
+  "Desarrollé soluciones analíticas con SQL, R, Python y Google Cloud reduciendo tiempos y errores operativos hasta en 50\\%.",
+  "Generé una cultura data centric, aumentando la productividad en 60\\% y la precisión de la toma de decisiones en 30\\%.",
+  
+  #[2]
+  "Lideré un equipo de 5 personas a cargo de la excelencia operativa y el soporte al cliente, socios y repartidores.",
+  "Desarrollé estrategias operativas, reduciendo tiempos de entrega hasta en 30\\% y optimizando los recursos en 20\\%.",
+  "Diseñé soluciones, modelos predictivos y automatizaciones usando SQL, R y Python aumentando en 40\\% la eficiencia.",
+  "Implementé modelos de Machine Learning para gestionar la disponibilidad de flota, incrementando los ingresos en 15\\%.",
+  "Incrementé las entregas on-time en 30\\% mediante la optimización de predicción de la demanda, zonas de servicio y rutas.",
+  
+  #[3]
+  "Lideré un equipo multifuncional a cargo de alianzas comerciales, adquisición y retención de clientes y análisis de churn.",
+  "Realicé promociones y recomendaciones data driven, reduciendo el churn en 20\\% y aumentando la adquisición en 25\\%.",
+  "Gestioné alianzas estratégicas para mejorar la visibilidad y alcance en el mercado, impulsando su expansión en 30\\%.",
+  "Diseñé y ejecuté campañas específicas que impulsaron el aumento de los ingresos en 20\\% y del ticket promedio en 10\\%.",
+  "Mejoré la UX mediante la optimización del customer journey, aumentando user engagement en 25\\% y conversión en 15\\%.",
+  
+  #[4]
+  "Lideré un equipo de Data Analysts y especialistas en Business Intelligence para proponer y desarrollar iniciativas analíticas.",
+  "Dirigí varios proyectos de data science, proporcionando data accionable e incrementando la eficiencia operativa en 25\\%.",
+  "Lideré proyectos de detección de fraudes, monetización de datos y desarrollo de socios, aumentando los ingresos en 20\\%.",
+  "Diseñé y ejecuté estrategias de pricing dinámico basadas en demanda y distancias, optimizando la rentabilidad en 20\\%."
+  
+)
+
+# English
+
+english_titles <- c(
+                    "Head of Operations", 
+                    "Logistics Performance Manager", 
+                    "Growth Marketing Lead", 
+                    "Analytics Lead"
+                    )
+
+english_companies <- c(
+                      "FALABELLA.COM",
+                      "PEDIDOSYA",
+                      "GLOVO",
+                      "GLOVO"
+                      )
+
+english_bullets <- c(
+  
+  #[1]
+  "Led a team of 30 people responsible for logistics, analytics, finance, and commercial support to clients and sellers.",
+  "Standardized and optimized operational processes at Falabella, Tottus, Sodimac, and Linio, improving efficiency by 20\\%.",
+  "Enhanced customer and seller experience, increasing CSAT by 15\\% and NPS by 20\\% with customer-centric strategies.",
+  "Led commercial initiatives and training for events like Cyber Days, achieving sales impacts of up to 15\\%.",
+  "Designed, executed, and automated the accounts receivable recovery strategy, recovering up to S/. 8 million.",
+  "Developed analytical solutions using SQL, R, Python and Google Cloud, reducing operational times and errors up to 50\\%.",
+  "Created a data-centric culture, increasing productivity by 60\\% and decision-making accuracy by 30\\%.",
+  
+  #[2]
+  "Led a team of 5 people responsible for operational excellence and support to customers, partners, and couriers.",
+  "Developed operational strategies, reducing delivery times by up to 30\\% and optimizing resources by 20\\%.",
+  "Designed solutions, predictive models, and automations using SQL, R, and Python, increasing efficiency by 40\\%.",
+  "Implemented Machine Learning models to manage fleet availability, increasing revenue by 15\\%.",
+  "Increased on-time deliveries by 30\\% through demand prediction, service area, and route optimization.",
+  
+  #[3]
+  "Led a cross-functional team in charge of commercial partnerships, customer acquisition and retention, and churn analysis.",
+  "Executed data-driven promotions and recommendations, reducing churn by 20\\% and increasing acquisition by 25\\%.",
+  "Managed strategic partnerships to improve market visibility and reach, driving a 30\\% expansion.",
+  "Designed and executed specific campaigns that boosted revenue by 20\\% and average ticket size by 10\\%.",
+  "Improved UX by optimizing the customer journey, increasing user engagement by 25\\% and conversion by 15\\%.",
+  
+  #[4]
+  "Led a team of Data Analysts and Business Intelligence specialists to propose and develop analytical initiatives.",
+  "Directed various data science projects, providing actionable data and increasing operational efficiency by 25\\%.",
+  "Led projects for fraud detection, data monetization, and partner development, increasing revenue by 20\\%.",
+  "Designed and executed dynamic pricing strategies based on demand and distances, optimizing profitability by 20\\%."
+
+)
+
+# Remote
+
+remote_titles <- c(
+                    "Head of Operations",
+                    "Logistics Performance Manager", 
+                    "Growth Marketing Lead", 
+                    "Analytics Lead"
+                    )
+
+remote_companies <- c(
+                      "FALABELLA.COM", 
+                      "PEDIDOSYA", 
+                      "GLOVO", 
+                      "GLOVO"
+                      )
+
+remote_bullets <- c(
+  
+  #[1]
+  "Led a team of 30 people responsible for logistics, analytics, finance, and commercial support to clients and sellers.",
+  "Standardized and optimized operational processes at Falabella, Tottus, Sodimac, and Linio, improving efficiency by 20\\%.",
+  "Enhanced customer and seller experience, increasing CSAT by 15\\% and NPS by 20\\% with customer-centric strategies.",
+  "Led commercial initiatives and training for events like Cyber Days, achieving sales impacts of up to 15\\%.",
+  "Designed, executed, and automated the accounts receivable recovery strategy, recovering up to S/. 8 million.",
+  "Developed analytical solutions using SQL, R, Python and Google Cloud, reducing operational times and errors up to 50\\%.",
+  "Created a data-centric culture, increasing productivity by 60\\% and decision-making accuracy by 30\\%.",
+  
+  #[2]
+  "Led a team of 5 people responsible for operational excellence and support to customers, partners, and couriers.",
+  "Developed operational strategies, reducing delivery times by up to 30\\% and optimizing resources by 20\\%.",
+  "Designed solutions, predictive models, and automations using SQL, R, and Python, increasing efficiency by 40\\%.",
+  "Implemented Machine Learning models to manage fleet availability, increasing revenue by 15\\%.",
+  "Increased on-time deliveries by 30\\% through demand prediction, service area, and route optimization.",
+  
+  #[3]
+  "Led a cross-functional team in charge of commercial partnerships, customer acquisition and retention, and churn analysis.",
+  "Executed data-driven promotions and recommendations, reducing churn by 20\\% and increasing acquisition by 25\\%.",
+  "Managed strategic partnerships to improve market visibility and reach, driving a 30\\% expansion.",
+  "Designed and executed specific campaigns that boosted revenue by 20\\% and average ticket size by 10\\%.",
+  "Improved UX by optimizing the customer journey, increasing user engagement by 25\\% and conversion by 15\\%.",
+  
+  #[4]
+  "Led a team of Data Analysts and Business Intelligence specialists to propose and develop analytical initiatives.",
+  "Directed various data science projects, providing actionable data and increasing operational efficiency by 25\\%.",
+  "Led projects for fraud detection, data monetization, and partner development, increasing revenue by 20\\%.",
+  "Designed and executed dynamic pricing strategies based on demand and distances, optimizing profitability by 20\\%."
+      
+)
+```
+
+```{r}
+
+# Spanish
+
+spanish_project_titles <- c(
+  "Modelo de clasificación de tallas de productos",
+  "Automatización de cierres contables y recuperación de cuentas por cobrar y pagar",
+  "Modelo predictivo de demanda de órdenes",
+  "Sistema de recomendación para clientes",
+  "Modelo de Machine Learning de análisis de canastas"
+)
+
+spanish_project_bullets <- c(
+  
+  #[1]
+  "Desarrollé un modelo de Machine Learning con Python (TensorFlow) para clasificar tallas de productos.",
+  "Se disminuyeron los errores logísticos en 30\\% y mejoraron los resultados en 20\\% al mejorar el cubicaje del transporte.",
+
+  #[2]
+  "Implementé la automatización de las Cuentas por Cobrar y Pagar mediante el uso de Google Cloud, SQL y Python",
+  "Se redujeron los incobrables en 90\\%, se recuperaron S/. 8 millones y se automatizó la gestión contable de los vendedores.",
+
+  #[3]
+  "Diseñé un modelo de Machine Learning con Python (TensorFlow) para pronosticar la demanda de pedidos.",
+  "Se optimizó la precisión llegando hasta 95\\% y las ganancias del personal hasta en 20\\% por la mejora de la eficiencia.",
+
+  #[4]
+  "Desarrollé sistemas de recomendación para clientes basados en compras previas y preferencias con Python (TensorFlow).",
+  "Se aumentaron los pedidos por cliente en 30\\%, el ticket promedio en 15\\% y se facilitó la introducción de nuevas marcas.",
+
+  #[5] 
+  "Creé un modelo de análisis de canastas con Python para generar promociones en la vertical supermercado (consumo masivo).",
+  "Aumentó la frecuencia de compra en 20\\%, ticket en 10\\% y se generaron alianzas comerciales importantes con proveedores."
+  
+)
+
+# English
+
+english_project_titles <- c(
+  "Product size classification model",
+  "Automation of accounting closing process and recovery of accounts receivable and payable",
+  "Predictive model for orders demand",
+  "Product recommendation systems for customers",
+  "Market basket analysis Machine Learning model"
+)
+
+english_project_bullets <- c(
+  
+  #[1]
+  "Developed a Machine Learning model using Python (TensorFlow) to classify product sizes.",
+  "Reduced logistical errors by 30\\% and improved results by 20\\% by enhancing transport cubic capacity.",
+
+  #[2]
+  "Implemented the automation of Accounts Receivable and Payable using Google Cloud, SQL, and Python.",
+  "Reduced uncollectibles by 90\\%, recovered S/. 8 million, and automated the accounting management for vendors.",
+
+  #[3]
+  "Designed a Machine Learning model using Python (TensorFlow) to forecast order demand.",
+  "Optimized accuracy up to 95\\% and increased staff earnings by up to 20\\% due to improved efficiency.",
+  
+  #[4]
+  "Developed customer recommendation systems based on previous purchases and preferences using Python (TensorFlow).",
+  "Increased orders per customer by 30\\%, average ticket size by 15\\%, and facilitated the introduction of new brands.",
+
+  #[5] 
+  "Created a market basket analysis model using Python to generate promotions in the supermarket vertical (mass consumption).",
+  "Increased purchase frequency by 20\\%, ticket size by 10\\% and established many commercial partnerships with suppliers."
+  
+)
+
+# Remote
+
+remote_project_titles <- c(
+  "Product size classification model",
+  "Automation of accounting closing process and recovery of accounts receivable and payable",
+  "Predictive model for orders demand",
+  "Product recommendation systems for customers",
+  "Market basket analysis Machine Learning model"
+)
+
+remote_project_bullets <- c(
+  
+  #[1]
+  "Developed a Machine Learning model using Python (TensorFlow) to classify product sizes.",
+  "Reduced logistical errors by 30\\% and improved results by 20\\% by enhancing transport cubic capacity.",
+
+  #[2]
+  "Implemented the automation of Accounts Receivable and Payable using Google Cloud, SQL, and Python.",
+  "Reduced uncollectibles by 90\\%, recovered S/. 8 million, and automated the accounting management for vendors.",
+
+  #[3]
+  "Designed a Machine Learning model using Python (TensorFlow) to forecast order demand.",
+  "Optimized accuracy up to 95\\% and increased staff earnings by up to 20\\% due to improved efficiency.",
+  
+  #[4]
+  "Developed customer recommendation systems based on previous purchases and preferences using Python (TensorFlow).",
+  "Increased orders per customer by 30\\%, average ticket size by 15\\%, and facilitated the introduction of new brands.",
+
+  #[5] 
+  "Created a market basket analysis model using Python to generate promotions in the supermarket vertical (mass consumption).",
+  "Increased purchase frequency by 20\\%, ticket size by 10\\% and established many commercial partnerships with suppliers."
+ 
+)
+
+```
+
+```{r}
+
+# Spanish
+
+spanish_degrees <- tribble(
+  ~degree, ~start, ~end, ~institution, ~location,
+  "Maestría en Administración de Negocios", 2018, 2018, "CENTRUM CATÓLICA", "Lima, Perú",
+  "Programa en Administración de Negocios Globales", 2018, 2018, "MAASTRICHT UNIVERSITY", "Maastricht, Países Bajos",
+  "Programa en Administración de Negocios Globales", 2018, 2018, "UNIVERSITY OF VICTORIA", "Victoria, B.C., Canadá",
+  "Ingeniería Industrial", 2014, 2014, "PONTIFICIA UNIVERSIDAD CATÓLICA DEL PERÚ", "Lima, Perú",
+)
+
+spanish_certifs <- tribble(
+  ~degree,
+  "\\textbf{Google Data Analytics} | Google | 2021",
+  "\\textbf{Google Project Management} | Google | 2021",
+  "\\textbf{Especialización en Deep Learning} | DeepLearning.AI | 2020",
+  "\\textbf{Analítica de Negocios y Gestión de la Información} | Centrum Católica | 2016"
+)
+
+spanish_teaching <- tribble(
+  ~experience,
+  "\\textbf{Google Data Analytics} | Google | 2021",
+  "\\textbf{Google Project Management} | Google | 2021",
+  "\\textbf{Especialización en Deep Learning} | DeepLearning.AI | 2020",
+  "\\textbf{Analítica de Negocios y Gestión de la Información} | Centrum Católica | 2016"
+)
+
+spanish_skills <- tribble(~skill,
+        "\\textbf{Idiomas:} Inglés, Español, Portugués",
+        "\\textbf{Data Science / Machine Learning:} SQL, Python (pandas, numpy, TensorFlow), R (tidyverse)",
+        "\\textbf{IDEs:} Visual Studio Code, RStudio, Google Colab, Jupyter Notebooks",
+        "\\textbf{Herramientas colaborativas:} Google Docs, Trello, Asana, Slack, Teams",
+        "\\textbf{Herramientas de visualización:} Looker, Tableau, Data Studio, Power BI",
+        "\\textbf{Herramientas CRM / Soporte:} Salesforce, Freshdesk, Jira, Kustomer",
+        "\\textbf{Cloud computing:} Google Cloud, Amazon Web Services, Microsoft Azure",
+        "\\textbf{Otros:} Docker, Git, Airflow, Spark, Regex, LaTeX, Markdown, DAX",
+        "\\textbf{ERPs:} SAP, Oracle",
+)
+
+spanish_soft_skills <- tribble(~skill,
+        "\\textbf{Liderazgo:} Amplia capacidad para inspirar y motivar equipos hacia el logro de objetivos en común.",
+        "\\textbf{Comunicación:} Excelentes habilidades de comunicación interpersonal, facilitando la colaboración.",
+        "\\textbf{Resolución de problemas:} Enfoque analítico para identificar y resolver problemas complejos de manera eficiente.",
+        "\\textbf{Mentoría y capacitación:} Experiencia en enseñanza y mentoría, promuevo el desarrollo profesional y personal.",
+        "\\textbf{Gestión del tiempo:} Habilidad para priorizar tareas y manejar múltiples proyectos bajo presión."
+)
+
+spanish_hobbies <- tribble(~description,
+        "Siempre estoy con actitud positiva y optimista, me encanta transmitir energías positivas con las personas que me rodean.",
+        "Participo en causas de Diversidad, Equidad e Inclusión (DEI) en el trabajo y comunidad por medio de liderazgo inclusivo.",
+        "Me encanta viajar y conocer nuevas culturas, he tenido la oportunidad de visitar 25 países y vivir en el extranjero.",
+        "Suelo caminar mucho con un promedio de 10 mil pasos diarios los últimos 18 meses y mantener una vida activa.",
+        "Me fascina la historia, disfruto aprendiendo de eventos históricos, civilizaciones antiguas y visitar museos."
+)
+
+# English
+
+english_degrees <- tribble(
+  ~degree, ~start, ~end, ~institution, ~location,
+  "Master in Business Administration", 2018, 2018, "CENTRUM CATOLICA", "Lima, Peru",
+  "Program in Global Business Administration", 2018, 2018, "MAASTRICHT UNIVERSITY", "Maastricht, Netherlands",
+  "Program in Global Business Administration", 2018, 2018, "UNIVERSITY OF VICTORIA", "Victoria, B.C., Canada",
+  "Industrial Engineer", 2014, 2014, "PONTIFICIA UNIVERSIDAD CATOLICA DEL PERU", "Lima, Peru",
+)
+
+english_certifs <- tribble(~degree,
+  "\\textbf{Google Data Analytics} | Google | 2021",
+  "\\textbf{Google Project Management} | Google | 2021",
+  "\\textbf{Deep Learning Specialization} | DeepLearning.AI | 2020",
+  "\\textbf{Data Management and Analytics} | Centrum Católica | 2016"
+)
+
+english_teaching <- tribble(
+  ~experience,
+  "\\textbf{Google Data Analytics} | Google | 2021",
+  "\\textbf{Google Project Management} | Google | 2021",
+  "\\textbf{Especialización en Deep Learning} | DeepLearning.AI | 2020",
+  "\\textbf{Analítica de Negocios y Gestión de la Información} | Centrum Católica | 2016"
+)
+
+english_skills <- tribble(~skill,
+        "\\textbf{Languages:} English, Spanish, Portuguese",
+        "\\textbf{Data Science / Machine Learning:} SQL, Python (pandas, numpy, TensorFlow), R (tidyverse)",
+        "\\textbf{IDEs:} Visual Studio Code, RStudio, Google Colab, Jupyter Notebooks",
+        "\\textbf{Collaborative tools:} Google Docs, Trello, Asana, Slack, Teams",
+        "\\textbf{Visualization tools:} Looker, Tableau, Data Studio, Power BI",
+        "\\textbf{CRM / Support tools:} Salesforce, Freshdesk, Jira, Kustomer",
+        "\\textbf{Cloud computing:} Google Cloud, Amazon Web Services, Microsoft Azure",
+        "\\textbf{Others:} Docker, Git, Airflow, Spark, Regex, LaTeX, Markdown, Visual Basic, DAX",
+        "\\textbf{ERPs:} SAP, Oracle",
+)
+
+english_soft_skills <- tribble(~skill,
+        "\\textbf{Leadership:} Extensive ability to inspire and motivate teams towards achieving common goals.",
+        "\\textbf{Communication:} Excellent interpersonal communication skills, facilitating collaboration.",
+        "\\textbf{Problem solving:} Analytical approach to identifying and efficiently resolving complex problems.",
+        "\\textbf{Mentoring and training:} Experience in teaching and mentoring, promoting professional and personal development.",
+        "\\textbf{Time management:} Ability to prioritize tasks and manage multiple projects under pressure."
+)
+
+english_hobbies <- tribble(~description,
+        "I always maintain a positive and optimistic attitude, and I love to share positive energy with those around me.",
+        "I participate in Diversity, Equity, and Inclusion (DEI) causes at work and in the community through inclusive leadership.",
+        "I love to travel and experience new cultures, having had the opportunity to visit 25 countries and live abroad.",
+        "I typically walk a lot, averaging 10,000 steps daily for the past 18 months, and I maintain an active lifestyle.",
+        "I am fascinated by history and enjoy learning about historical events, ancient civilizations, and visiting museums."
+)
+
+# Remote
+
+remote_degrees <- tribble(
+  ~degree, ~start, ~end, ~institution, ~location,
+  "Master in Business Administration", 2018, 2018, "CENTRUM CATOLICA", "Lima, Peru",
+  "Program in Global Business Administration", 2018, 2018, "MAASTRICHT UNIVERSITY", "Maastricht, Netherlands",
+  "Program in Global Business Administration", 2018, 2018, "UNIVERSITY OF VICTORIA", "Victoria, B.C., Canada",
+  "Industrial Engineer", 2014, 2014, "PONTIFICIA UNIVERSIDAD CATOLICA DEL PERU", "Lima, Peru",
+)
+
+remote_certifs <- tribble(~degree,
+  "\\textbf{Google Data Analytics} | Google | 2021",
+  "\\textbf{Google Project Management} | Google | 2021",
+  "\\textbf{Deep Learning Specialization} | DeepLearning.AI | 2020",
+  "\\textbf{Data Management and Analytics} | Centrum Católica | 2016"
+)
+
+remote_teaching <- tribble(
+  ~experience,
+  "\\textbf{Google Data Analytics} | Google | 2021",
+  "\\textbf{Google Project Management} | Google | 2021",
+  "\\textbf{Especialización en Deep Learning} | DeepLearning.AI | 2020",
+  "\\textbf{Analítica de Negocios y Gestión de la Información} | Centrum Católica | 2016"
+)
+
+remote_skills <- tribble(~skill,
+        "\\textbf{Languages:} English, Spanish, Portuguese",
+        "\\textbf{Data Science / Machine Learning:} SQL, Python (pandas, numpy, TensorFlow), R (tidyverse)",
+        "\\textbf{IDEs:} Visual Studio Code, RStudio, Google Colab, Jupyter Notebooks",
+        "\\textbf{Collaborative tools:} Google Docs, Trello, Asana, Slack, Teams",
+        "\\textbf{Visualization tools:} Looker, Tableau, Data Studio, Power BI",
+        "\\textbf{CRM / Support tools:} Salesforce, Freshdesk, Jira, Kustomer",
+        "\\textbf{Cloud computing:} Google Cloud, Amazon Web Services, Microsoft Azure",
+        "\\textbf{Others:} Docker, Git, Kubernetes, Airflow, Spark, Regex, LaTeX, Markdown, Visual Basic, DAX",
+        "\\textbf{ERPs:} SAP, Oracle"
+)
+
+remote_soft_skills <- tribble(~skill,
+        "\\textbf{Leadership:} Extensive ability to inspire and motivate teams towards achieving common goals.",
+        "\\textbf{Communication:} Excellent interpersonal communication skills, facilitating collaboration.",
+        "\\textbf{Problem solving:} Analytical approach to identifying and efficiently resolving complex problems.",
+        "\\textbf{Mentoring and training:} Experience in teaching and mentoring, promoting professional and personal development.",
+        "\\textbf{Time management:} Ability to prioritize tasks and manage multiple projects under pressure."
+)
+
+remote_hobbies <- tribble(~description,
+        "I always maintain a positive and optimistic attitude, and I love to share positive energy with those around me.",
+        "I participate in Diversity, Equity, and Inclusion (DEI) causes at work and in the community through inclusive leadership.",
+        "I love to travel and experience new cultures, having had the opportunity to visit 25 countries and live abroad.",
+        "I typically walk a lot, averaging 10,000 steps daily for the past 18 months, and I maintain an active lifestyle.",
+        "I am fascinated by history and enjoy learning about historical events, ancient civilizations, and visiting museums."
+)
+
+```
+
+```{r}
+# Select the appropriate set of titles, companies, and bullets
+if (lang == "English") {
+    sections <- english_sections
+    summary <- english_summary
+    titles <- english_titles
+    companies <- english_companies
+    bullets <- english_bullets
+    degrees <- english_degrees
+    certifs <- english_certifs
+    project_titles <- english_project_titles
+    project_bullets <- english_project_bullets
+    teaching <- english_teaching
+    skills <- english_skills
+    soft_skills <- english_soft_skills
+    hobbies <- english_hobbies
+  } else if (lang == "Spanish") {
+    sections <- spanish_sections
+    summary <- spanish_summary
+    titles <- spanish_titles
+    companies <- spanish_companies
+    bullets <- spanish_bullets
+    degrees <- spanish_degrees
+    certifs <- spanish_certifs
+    project_titles <- spanish_project_titles
+    project_bullets <- spanish_project_bullets
+    teaching <- spanish_teaching
+    skills <- spanish_skills
+    soft_skills <- spanish_soft_skills
+    hobbies <- spanish_hobbies
+  } else if (lang == "Remote") {
+    sections <- remote_sections
+    summary <- remote_summary
+    titles <- remote_titles
+    companies <- remote_companies
+    bullets <- remote_bullets
+    degrees <- remote_degrees
+    certifs <- remote_certifs
+    project_titles <- remote_project_titles
+    project_bullets <- remote_project_bullets
+    teaching <- remote_teaching
+    skills <- remote_skills
+    soft_skills <- remote_soft_skills
+    hobbies <- remote_hobbies
+  } else {
+    stop("Language error.")
+  }
+```
+
+\thispagestyle{empty}
+
+\smallskip
+<!--
+\hspace{0.25cm}\color{black}{\Large\faInfoCircle}\hspace{0.25cm}\section{`r sections[1]`}
+
+\vspace{0cm}
+
+```{r summary, results='asis'}
+tribble(~description,
+        paragraph(summary[1]),
+        "\\tiny"
+        ) %>%
+        tabular()
+```
+
+\vspace{0cm}
+-->
+\hspace{0.25cm}\color{black}{\Large\faBriefcase}\hspace{0.25cm}\section{`r sections[2]`}
+
+\vspace{-0.05cm}
+
+```{r experience, results='asis'}
+tribble(~position, ~start, ~end,
+
+# Nota: Si hay error aquí es por los putos porcentajes        
+        
+        # Position
+        title(titles[1]), 2021, NA,
+        company(companies[1]), 2021, NA,
+        bullet(bullets[1]), 2021, NA,
+        bullet(bullets[2]), 2021, NA,
+        bullet(bullets[3]), 2021, NA,
+        bullet(bullets[4]), 2021, NA,
+        bullet(bullets[5]), 2021, NA,
+        bullet(bullets[6]), 2021, NA,
+        bullet(bullets[7]), 2021, NA,
+        "\\tiny", 2021, NA,
+
+        # Position
+        title(titles[2]), 2021, 2021,
+        company(companies[2]), 2021, 2021,
+        bullet(bullets[8]), 2021, 2021,
+        bullet(bullets[9]), 2021, 2021,
+        bullet(bullets[10]), 2021, 2021,
+        bullet(bullets[11]), 2021, 2021,
+        bullet(bullets[12]), 2021, 2021,
+        "\\tiny", 2021, 2021,
+
+        # Position
+        title(titles[3]), 2020, 2021,
+        company(companies[3]), 2020, 2021,
+        bullet(bullets[13]), 2020, 2021,
+        bullet(bullets[14]), 2020, 2021,
+        bullet(bullets[15]), 2020, 2021,
+        bullet(bullets[16]), 2020, 2021,
+        bullet(bullets[17]), 2020, 2021,
+        "\\tiny", 2020, 2021,
+
+        # Position
+        title(titles[4]), 2018, 2019,
+        company(companies[4]), 2018, 2019,
+        #bullet(bullets[17]), 2018, 2019,
+        bullet(bullets[18]), 2018, 2019,
+        bullet(bullets[19]), 2018, 2019,
+        bullet(bullets[20]), 2018, 2019,
+        bullet(bullets[21]), 2018, 2019,
+        "\\tiny", 2018, 2019,
+        
+        ) %>%
+        arrange(-start) %>%
+        mutate(end = replace_na(as.character(end), "")) %>%
+        mutate(years = if_else(end==start,
+                                as.character(start),
+                                paste(start, "--", end, sep=""))) %>%
+        select(years, position) %>%
+        group_by(years) %>%
+        mutate(n = row_number()) %>%
+        mutate(years = case_when(n>1 ~ "", TRUE ~ years)) %>%
+        mutate(years = case_when(n==2 ~ location(degrees$location[1]), TRUE ~ years)) %>%
+        mutate(aux = str_detect(years,'^20*')) %>%
+        mutate(years = case_when(aux==TRUE ~ calendar(years), TRUE ~ years)) %>%
+        select(position, years) %>%
+        ungroup() %>%
+        mutate(final=paste(position, years, sep="")) %>%
+        select(final) %>%
+        tabular()
+```
+
+\vspace{-0.05cm}
+
+\hspace{0.25cm}\color{black}{\Large\faGraduationCap}\hspace{0.25cm}\section{`r sections[3]`}
+
+\vspace{-0.05cm}
+
+```{r education, results='asis'}
+tribble(~degree, ~start, ~end,
+
+        title(degrees$degree[1]), degrees$start[1], degrees$end[1],
+        company(degrees$institution[1]), degrees$start[1], degrees$end[1],
+        "\\tiny", degrees$start[1], degrees$end[1],
+
+        title(degrees$degree[2]), degrees$start[2], degrees$end[2],
+        company(degrees$institution[2]), degrees$start[2], degrees$end[2],
+        company(degrees$institution[3]), degrees$start[3], degrees$end[3],
+        "\\tiny", degrees$start[2], degrees$end[2],
+
+        title(degrees$degree[4]), degrees$start[4], degrees$end[4],
+        company(degrees$institution[4]), degrees$start[4], degrees$end[4],
+        "\\tiny", degrees$start[4], degrees$end[4],
+
+        ) %>%
+        arrange(-start) %>%
+        mutate(end = replace_na(as.character(end), "")) %>%
+        mutate(years = if_else(end==start,
+                                as.character(start),
+                                paste(start, "--", end, sep=""),
+                                paste(start, "--", end, sep="")
+                                )) %>%
+        select(years, degree) %>%
+        mutate(r = case_when(grepl('textbf', degree) ~ row_number())) %>%
+        fill(r, .direction = c('down')) %>%
+        group_by(years, r) %>%
+        mutate(n = row_number()) %>%
+        mutate(years = case_when(n>1 ~ "", TRUE ~ years)) %>%
+        mutate(years = case_when(
+                    grepl(degrees$institution[1], degree) ~ location(degrees$location[1]),
+                    grepl(degrees$institution[2], degree) ~ location(degrees$location[2]),
+                    grepl(degrees$institution[3], degree) ~ location(degrees$location[3]),
+                    grepl(degrees$institution[4], degree) ~ location(degrees$location[4]),
+                    TRUE ~ years)) %>%
+        mutate(aux = str_detect(years,'^20*')) %>%
+        mutate(years = case_when(aux==TRUE ~ calendar(years), TRUE ~ years)) %>%
+        select(degree, years) %>%
+        ungroup() %>%
+        mutate(final=paste(degree, years, sep="")) %>%
+        select(final) %>%
+        tabular()
+```
+
+\vspace{-0.05cm}
+
+\hspace{0.25cm}\color{black}{\Large\faUniversity}\hspace{0.25cm}\section{`r sections[4]`}
+
+\vspace{-0.05cm}
+
+```{r certificates, results='asis'}
+tribble(~degree,
+        bullet(certifs$degree[1]),
+        bullet(certifs$degree[2]),
+        bullet(certifs$degree[3]),
+        bullet(certifs$degree[4]),
+        "\\tiny"
+        ) %>%
+        tabular()
+```
+
+\vspace{-0.1cm}
+
+\hspace{0.25cm}\color{black}{\Large\faList}\hspace{0.25cm}\section{`r sections[5]`}
+
+\vspace{-0.1cm}
+
+```{r projects, results='asis'}
+tribble(~project,
+    
+    # Proyecto 1
+    title(project_titles[1]), 
+    company(project_bullets[1]), 
+    bullet(project_bullets[2]), 
+    "\\tiny", 
+    
+    # Proyecto 2
+    title(project_titles[2]), 
+    company(project_bullets[3]), 
+    bullet(project_bullets[4]),
+    "\\tiny",
+    
+    # Proyecto 3
+    title(project_titles[3]),
+    company(project_bullets[5]),
+    bullet(project_bullets[6]),
+    "\\tiny",
+    
+    # Proyecto 4
+    title(project_titles[4]), 
+    company(project_bullets[7]), 
+    bullet(project_bullets[8]),
+    "\\tiny",
+    
+    # Proyecto 5
+    title(project_titles[5]),
+    company(project_bullets[9]),
+    bullet(project_bullets[10]),
+    "\\tiny",
+    
+  ) %>%
+  tabular()
+```
+
+\vspace{-0.1cm}
+
+\hspace{0.25cm}\color{black}{\Large\faBook}\hspace{0.25cm}\section{`r sections[6]`}
+
+\vspace{-0.1cm}
+
+```{r technical_skills, results='asis'}
+tribble(~skill,
+        bullet(skills$skill[1]),
+        bullet(skills$skill[2]),
+        bullet(skills$skill[3]),
+        bullet(skills$skill[4]),
+        bullet(skills$skill[5]),
+        bullet(skills$skill[6]),
+        bullet(skills$skill[7]),
+        bullet(skills$skill[8]),
+        bullet(skills$skill[9]),
+        "\\tiny"
+        ) %>%
+        tabular()
+```
+
+\vspace{-0.1cm}
+
+\hspace{0.25cm}\color{black}{\Large\faComment}\hspace{0.25cm}\section{`r sections[7]`}
+
+\vspace{-0.1cm}
+
+```{r soft_skills, results='asis'}
+tribble(~skills,
+        bullet(soft_skills$skill[1]),
+        bullet(soft_skills$skill[2]),
+        bullet(soft_skills$skill[3]),
+        bullet(soft_skills$skill[4]),
+        bullet(soft_skills$skill[5]),
+        "\\tiny"
+        ) %>%
+        tabular()
+```
+
+\vspace{-0.1cm}
+
+\hspace{0.25cm}\color{black}{\Large\faBalanceScale}\hspace{0.25cm}\section{`r sections[8]`}
+
+\vspace{-0.1cm}
+
+```{r interests, results='asis'}
+tribble(~hobbies,
+        bullet(hobbies$description[1]),
+        bullet(hobbies$description[2]),
+        bullet(hobbies$description[3]),
+        bullet(hobbies$description[4]),
+        bullet(hobbies$description[5]),
+        "\\tiny"
+        ) %>%
+        tabular()
+```
+
+\thispagestyle{empty}
