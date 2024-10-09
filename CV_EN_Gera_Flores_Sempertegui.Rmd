@@ -284,8 +284,11 @@ english_bullets <- c(
   "Led a team of Data Analysts and Business Intelligence specialists to propose and develop analytical initiatives.",
   "Directed various data science projects, providing actionable data and increasing operational efficiency by 25\\%.",
   "Led projects for fraud detection, data monetization, and partner development, increasing revenue by 20\\%.",
-  "Designed and executed dynamic pricing strategies based on demand and distances, optimizing profitability by 20\\%."
-
+  "Designed and executed dynamic pricing strategies based on demand and distances, optimizing profitability by 20\\%.",
+  
+  #[5]
+  paste0("\\textbf{Additional experience:} More than 5 years of experience as an independent consultant and teacher and I have worked in areas like customer experience, sales, finance, logistics and production in companies like Entel, Goodyear, FLSmidth and Metso. More details in ", 
+         "\\href{https://www.linkedin.com/in/gflores1092/}{\\textbf{LinkedIn}}.")
 )
 
 # Remote
@@ -505,8 +508,8 @@ spanish_hobbies <- tribble(~description,
 english_degrees <- tribble(
   ~degree, ~start, ~end, ~institution, ~location,
   "Master in Business Administration", 2018, 2018, "CENTRUM CATOLICA", "Lima, Peru",
-  "Program in Global Business Administration", 2018, 2018, "MAASTRICHT UNIVERSITY", "Maastricht, Netherlands",
-  "Program in Global Business Administration", 2018, 2018, "UNIVERSITY OF VICTORIA", "Victoria, B.C., Canada",
+  "Global Business Management", 2018, 2018, "MAASTRICHT UNIVERSITY", "Maastricht, Netherlands",
+  "Global Business Management", 2018, 2018, "UNIVERSITY OF VICTORIA", "Victoria, B.C., Canada",
   "Industrial Engineer", 2014, 2014, "PONTIFICIA UNIVERSIDAD CATOLICA DEL PERU", "Lima, Peru",
 )
 
@@ -660,6 +663,9 @@ if (lang == "English") {
 \thispagestyle{empty}
 
 \smallskip
+
+\vspace{-0.50cm}
+
 <!--
 \hspace{0.25cm}\color{black}{\Large\faInfoCircle}\hspace{0.25cm}\section{`r sections[1]`}
 
@@ -677,7 +683,7 @@ tribble(~description,
 -->
 \hspace{0.25cm}\color{black}{\Large\faBriefcase}\hspace{0.25cm}\section{`r sections[2]`}
 
-\vspace{-0.05cm}
+\vspace{-0.25cm}
 
 ```{r experience, results='asis'}
 tribble(~position, ~start, ~end,
@@ -726,6 +732,9 @@ tribble(~position, ~start, ~end,
         bullet(bullets[21]), 2018, 2019,
         "\\tiny", 2018, 2019,
         
+        company(bullets[22]), 2018, 2019,
+        "\\tiny", 2018, 2019,
+
         ) %>%
         arrange(-start) %>%
         mutate(end = replace_na(as.character(end), "")) %>%
@@ -746,11 +755,11 @@ tribble(~position, ~start, ~end,
         tabular()
 ```
 
-\vspace{-0.05cm}
+\vspace{-0.10cm}
 
 \hspace{0.25cm}\color{black}{\Large\faGraduationCap}\hspace{0.25cm}\section{`r sections[3]`}
 
-\vspace{-0.05cm}
+\vspace{-0.25cm}
 
 ```{r education, results='asis'}
 tribble(~degree, ~start, ~end,
@@ -797,11 +806,11 @@ tribble(~degree, ~start, ~end,
         tabular()
 ```
 
-\vspace{-0.05cm}
+\vspace{-0.10cm}
 
 \hspace{0.25cm}\color{black}{\Large\faUniversity}\hspace{0.25cm}\section{`r sections[4]`}
 
-\vspace{-0.05cm}
+\vspace{-0.10cm}
 
 ```{r certificates, results='asis'}
 tribble(~degree,

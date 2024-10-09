@@ -2,17 +2,17 @@
 docname: Curriculum Vitae
 name: |
   | \huge\textbf{Gera Flores Sempertegui}
-profilepic: "foto.png"
+#profilepic: "foto.png"
 position: |
-  | \scriptsize INDUSTRIAL ENGINEER MBA | E-COMMERCE | MANAGEMENT | TECHNOLOGY | DATA SCIENCE 
-address: |
-  | \normalfont\scriptsize\faMapMarker\hspace{0.1cm}{\scriptsize San Martin 590, Miraflores, Lima, Peru}
+  | \scriptsize INDUSTRIAL ENGINEER MBA | E-COMMERCE | MANAGEMENT | STRATEGY | OPERATIONS
+#address: |
+#  | \normalfont\scriptsize\faMapMarker\hspace{0.1cm}{\scriptsize San Martin 590, Miraflores, Lima, Peru}
 phone: (+51) 948425000
 email: "gflores1092@gmail.com"
 linkedin: gflores1092
 #github: gflores1092
-aboutme: |
-  | \normalfont{Líder ejecutiva con más de 10 años de trayectoria en e-commerce, tecnología y startups. Experta en gestión y comercial con sólidas habilidades técnicas. Preparada para roles de alta dirección, capaz de liderar equipos grandes y comprometida con la innovación y el crecimiento en entornos dinámicos. Reconocida por ser una profesional data driven con proyectos e iniciativas de alto impacto.}
+#aboutme: |
+#  | \normalfont{Líder ejecutiva con más de 10 años de trayectoria en e-commerce, tecnología y startups. Experta en gestión y comercial con sólidas habilidades técnicas. Preparada para roles de alta dirección, capaz de liderar equipos grandes y comprometida con la innovación y el crecimiento en entornos dinámicos. Reconocida por ser una profesional data driven con proyectos e iniciativas de alto impacto.}
 # | \normalfont{Executive leader with over 10 years of experience in e-commerce, technology, and startups. Expert in management and commercial operations with strong technical skills. Prepared for senior management roles, capable of leading large teams, and committed to innovation and growth in dynamic environments. Recognized as a data driven professional with high impact projects and initiatives.}
 ##www: gflores1092.carrd.co
 headcolor: 414141
@@ -29,6 +29,9 @@ header-includes:
   - \definecolor{text}{HTML}{0066CC}
   - \usepackage{graphicx}
   - \newcommand{\profilepic}{\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{foto.png}}
+  - \usepackage{geometry}
+  - \geometry{left=1.5cm, right=1.5cm, top=1cm, bottom=1cm}
+
 ---
 
 ```{r setup, include=FALSE}
@@ -171,7 +174,7 @@ remote_sections <- c(
 # Spanish
 
 spanish_summary <- c(
-  "Líder ejecutiva con 10 años de trayectoria en los sectores de e-commerce, tecnología y startups. Destaco en áreas como operaciones, logística, marketing, finanzas y data science. Con habilidades analíticas avanzadas y alta capacidad para la toma de decisiones basadas en datos. Experiencia en liderazgo de equipos interfuncionales de hasta 30 personas. Preparada para asumir roles de alta dirección, con el compromiso de fomentar la innovación, crecimiento, excelencia y éxito empresarial."
+  "Líder ejecutiva con más de 10 años de trayectoria en e-commerce, tecnología y startups. Experta en gestión y desarrollo comercial, con destacada capacidad en liderazgo estratégico y sólidas habilidades técnicas. Preparada para roles de alta dirección, capaz de liderar grandes equipos y comprometida con la innovación y el crecimiento en entornos dinámicos. Reconocida por su enfoque orientado a objetivos, con un historial comprobado de proyectos e iniciativas de alto impacto."
 )
 
 # English
@@ -196,14 +199,16 @@ spanish_titles <- c(
                     "Head of Operations", 
                     "Logistics Performance Manager", 
                     "Growth Marketing Lead", 
-                    "Analytics Lead"
+                    "Analytics Lead",
+                    "Experiencia adicional"
                     )
 
 spanish_companies <- c(
                       "FALABELLA.COM", 
                       "PEDIDOSYA", 
                       "GLOVO", 
-                      "GLOVO"
+                      "GLOVO",
+                      "DIVERSAS EMPRESAS"
                       )
 
 spanish_bullets <- c(
@@ -212,17 +217,17 @@ spanish_bullets <- c(
   "Lideré un equipo de 30 personas responsable de la logística, analítica, finanzas y soporte comercial a clientes y vendedores.",
   "Estandaricé y optimicé procesos operativos en Falabella, Tottus, Sodimac y Linio, mejorando la eficiencia operativa en 20\\%.",
   "Impulsé la experiencia de clientes y sellers, aumentando el CSAT en 15\\% y NPS en 20\\% con estrategias customer centric.",
+  "Desarrollé, ejecuté y gestioné la estrategia de recuperación de cuentas por cobrar recuperando hasta S/. 8 millones.",
+  "Gestioné presupuestos, control de gastos, transacciones contables y el P\\&L, asegurando el crecimiento y rentabilidad.",
+  "Lideré proyectos con los equipos de producto, proyectos, comercial y tecnología para garantizar la excelencia operativa.",
   "Lideré iniciativas comerciales y capacitaciones para eventos como Cyber Days logrando impactos en ventas hasta en 15\\%.",
-  "Diseñé, ejecuté y automaticé la estrategia de recuperación de cuentas por cobrar recuperando hasta S/. 8 millones.",
-  "Desarrollé soluciones analíticas con SQL, R, Python y Google Cloud reduciendo tiempos y errores operativos hasta en 50\\%.",
-  "Generé una cultura data centric, aumentando la productividad en 60\\% y la precisión de la toma de decisiones en 30\\%.",
   
   #[2]
   "Lideré un equipo de 5 personas a cargo de la excelencia operativa y el soporte al cliente, socios y repartidores.",
   "Desarrollé estrategias operativas, reduciendo tiempos de entrega hasta en 30\\% y optimizando los recursos en 20\\%.",
-  "Diseñé soluciones, modelos predictivos y automatizaciones usando SQL, R y Python aumentando en 40\\% la eficiencia.",
-  "Implementé modelos de Machine Learning para gestionar la disponibilidad de flota, incrementando los ingresos en 15\\%.",
+  "Implementé estrategias para la expansión de operaciones logísticas en nuevas ciudades, aumentando la cobertura en 25\\%.",
   "Incrementé las entregas on-time en 30\\% mediante la optimización de predicción de la demanda, zonas de servicio y rutas.",
+  "Establecí y monitoreé 12 KPIs operativos, logrando un cumplimiento del 95\\% de los objetivos de desempeño establecidos.",
   
   #[3]
   "Lideré un equipo multifuncional a cargo de alianzas comerciales, adquisición y retención de clientes y análisis de churn.",
@@ -232,11 +237,15 @@ spanish_bullets <- c(
   "Mejoré la UX mediante la optimización del customer journey, aumentando user engagement en 25\\% y conversión en 15\\%.",
   
   #[4]
-  "Lideré un equipo de Data Analysts y especialistas en Business Intelligence para proponer y desarrollar iniciativas analíticas.",
-  "Dirigí varios proyectos de data science, proporcionando data accionable e incrementando la eficiencia operativa en 25\\%.",
+  "Lideré un equipo data driven para proponer proyectos, estandarizar procesos y generar desarrollos en toda la compañía.",
   "Lideré proyectos de detección de fraudes, monetización de datos y desarrollo de socios, aumentando los ingresos en 20\\%.",
-  "Diseñé y ejecuté estrategias de pricing dinámico basadas en demanda y distancias, optimizando la rentabilidad en 20\\%."
+  "Diseñé y ejecuté estrategias de pricing dinámico basadas en demanda y distancias, optimizando la rentabilidad en 20\\%.",
+  "Diseñé soluciones, modelos predictivos y automatizaciones usando SQL, R y Python aumentando en 40\\% la eficiencia.",
   
+  #[5]
+  "Consultora de negocios en pequeñas y medianas empresas (pymes) y docente de alumnos de pregrado y postgrado.",
+  "En áreas de experiencia del cliente, finanzas y logística en empresas como ENTEL, GOODYEAR, FLSMIDTH y METSO."
+
 )
 
 # English
@@ -259,11 +268,11 @@ english_bullets <- c(
   
   #[1]
   "Led a team of 30 people responsible for logistics, analytics, finance, and commercial support to clients and sellers.",
-  "Standardized and optimized operational processes at Falabella, Tottus, Sodimac, and Linio, improving operational efficiency by 20\\%.",
+  "Standardized and optimized operational processes at Falabella, Tottus, Sodimac, and Linio, improving efficiency by 20\\%.",
   "Enhanced customer and seller experience, increasing CSAT by 15\\% and NPS by 20\\% with customer-centric strategies.",
   "Led commercial initiatives and training for events like Cyber Days, achieving sales impacts of up to 15\\%.",
   "Designed, executed, and automated the accounts receivable recovery strategy, recovering up to S/. 8 million.",
-  "Developed analytical solutions using SQL, R, Python, and Google Cloud, reducing operational times and errors by up to 50\\%.",
+  "Developed analytical solutions using SQL, R, Python and Google Cloud, reducing operational times and errors up to 50\\%.",
   "Created a data-centric culture, increasing productivity by 60\\% and decision-making accuracy by 30\\%.",
   
   #[2]
@@ -307,34 +316,33 @@ remote_companies <- c(
 remote_bullets <- c(
   
   #[1]
-  "Led an operational excellence team, achieving 25\\% operational efficiency through predictive models in Python.",
-  "Increased CSAT by 20\\% and NPS by 15\\% with projects such as a Machine Learning recommendation system in Python.",
-  "Standardized processes across marketplaces, reducing processing time by 30\\% using Apache Airflow and SQL.",
-  "Developed Google Cloud, BigQuery, and TensorFlow solutions, cutting operational costs by 25\\% with real-time analytics.",
-  "Improved orders planning and delivery time with a ML classification system for product sizes with TensorFlow.",
-  "Enhanced team collaboration with automated R and Python reporting, improving project delivery time by 15\\%.",
-  "Integrated data-driven operations with Shiny dashboards, increasing efficiency by 40\\% and productivity by 50\\%.",
+  "Led a team of 30 people responsible for logistics, analytics, finance, and commercial support to clients and sellers.",
+  "Standardized and optimized operational processes at Falabella, Tottus, Sodimac, and Linio, improving efficiency by 20\\%.",
+  "Enhanced customer and seller experience, increasing CSAT by 15\\% and NPS by 20\\% with customer-centric strategies.",
+  "Led commercial initiatives and training for events like Cyber Days, achieving sales impacts of up to 15\\%.",
+  "Designed, executed, and automated the accounts receivable recovery strategy, recovering up to S/. 8 million.",
+  "Developed analytical solutions using SQL, R, Python and Google Cloud, reducing operational times and errors up to 50\\%.",
+  "Created a data-centric culture, increasing productivity by 60\\% and decision-making accuracy by 30\\%.",
   
   #[2]
-  "Increased on-time deliveries by 30\\% with optimized demand prediction models in SQL and Python.",
-  "Reformulated strategies, reducing delivery times and optimizing resources with R and Python automations.",
-  "Developed predictive models with TensorFlow and automations, improving fleet availability management by 25\\%.",
-  "Implemented machine learning models for demand forecasting, enhancing resource allocation and efficiency.",
-  "Optimized service areas and routes based on data, increasing delivery efficiency by 30\\% using Python.",
+  "Led a team of 5 people responsible for operational excellence and support to customers, partners, and couriers.",
+  "Developed operational strategies, reducing delivery times by up to 30\\% and optimizing resources by 20\\%.",
+  "Designed solutions, predictive models, and automations using SQL, R, and Python, increasing efficiency by 40\\%.",
+  "Implemented Machine Learning models to manage fleet availability, increasing revenue by 15\\%.",
+  "Increased on-time deliveries by 30\\% through demand prediction, service area, and route optimization.",
   
   #[3]
-  "Responsible of customer acquisition and churn analysis, reducing churn by 20\\% with data-driven recommendations.",
-  "Executed targeted campaigns, increasing revenue by 20\\% and average ticket size by 10\\% using predictive analytics.",
-  "Established strategic partnerships, driving growth and expansion through data insights based on Market Basket Analysis.",
-  "Improved UX and user engagement by 25\\%, optimizing the customer journey with advanced analytics.",
-  "Boosted conversion rates by 15\\% with personalized marketing strategies and machine learning models.",
-    
+  "Led a cross-functional team in charge of commercial partnerships, customer acquisition and retention, and churn analysis.",
+  "Executed data-driven promotions and recommendations, reducing churn by 20\\% and increasing acquisition by 25\\%.",
+  "Managed strategic partnerships to improve market visibility and reach, driving a 30\\% expansion.",
+  "Designed and executed specific campaigns that boosted revenue by 20\\% and average ticket size by 10\\%.",
+  "Improved UX by optimizing the customer journey, increasing user engagement by 25\\% and conversion by 15\\%.",
+  
   #[4]
-  "Led a team of Data Analysts and BI specialists, developing actionable insights through data science projects.",
-  "Directed fraud detection and data monetization projects, reducing losses by 15\\% and increasing revenue by 20\\%.",
-  "Implemented dynamic pricing strategies based on demand, increasing revenue by 10\\% with machine learning.",
-  "Developed real-time analytical dashboards, improving decision-making efficiency by 30\\% using SQL and Python.",
-  "Enhanced data-driven decision-making, optimizing operational and financial metrics through advanced analytics."
+  "Led a team of Data Analysts and Business Intelligence specialists to propose and develop analytical initiatives.",
+  "Directed various data science projects, providing actionable data and increasing operational efficiency by 25\\%.",
+  "Led projects for fraud detection, data monetization, and partner development, increasing revenue by 20\\%.",
+  "Designed and executed dynamic pricing strategies based on demand and distances, optimizing profitability by 20\\%."
       
 )
 ```
@@ -344,34 +352,34 @@ remote_bullets <- c(
 # Spanish
 
 spanish_project_titles <- c(
-  "Modelo de clasificación de tallas de productos",
-  "Automatización de cierres contables y recuperación de cuentas por cobrar y pagar",
-  "Modelo predictivo de demanda de órdenes",
-  "Sistema de recomendación para clientes",
-  "Modelo de Machine Learning de análisis de canastas"
+  "Mejora en la gestión de cierres contables y recuperación de cuentas por cobrar y pagar",
+  "Control eficiente de gastos e impacto en los resultados del P\\&L",
+  "Optimización de la planificación y transporte en la cadena de suministro",
+  "Migración de Linio y Falabella Marketplace a Falabella.com",
+  "Introducción de nuevos productos en base a comportamiento de clientes"
 )
 
 spanish_project_bullets <- c(
-  
+
   #[1]
-  "Desarrollé un modelo de Machine Learning con Python (TensorFlow) para clasificar tallas de productos.",
-  "Se disminuyeron los errores logísticos en 30\\% y mejoraron los resultados en 20\\% al mejorar el cubicaje del transporte.",
-
-  #[2]
-  "Implementé la automatización de las Cuentas por Cobrar y Pagar mediante el uso de Google Cloud, SQL y Python",
-  "Se redujeron los incobrables en 90\\%, se recuperaron S/. 8 millones y se automatizó la gestión contable de los vendedores.",
-
-  #[3]
-  "Diseñé un modelo de Machine Learning con Python (TensorFlow) para pronosticar la demanda de pedidos.",
-  "Se optimizó la precisión llegando hasta 95\\% y las ganancias del personal hasta en 20\\% por la mejora de la eficiencia.",
-
-  #[4]
-  "Desarrollé sistemas de recomendación para clientes basados en compras previas y preferencias con Python (TensorFlow).",
-  "Se aumentaron los pedidos por cliente en 30\\%, el ticket promedio en 15\\% y se facilitó la introducción de nuevas marcas.",
+  "Lideré, gestioné y mejoré la visibilidad de las Cuentas por Cobrar y Pagar mediante el uso de herramientas analíticas.",
+  "Se redujeron los incobrables en 90\\%, se recuperaron S/. 8 millones y se mejoró la gestión contable de los vendedores.",
 
   #[5] 
-  "Creé un modelo de análisis de canastas con Python para generar promociones en la vertical supermercado (consumo masivo).",
-  "Aumentó la frecuencia de compra en 20\\%, ticket en 10\\% y se generaron alianzas comerciales importantes con proveedores."
+  "Desarrollé herramientas y proyecciones y lideré proyectos de mejora de procesos para el control de gastos por conceptos operativos.",
+  "Se redujeron los gastos por conceptos operativos hasta en 60\\% y se generaron puntos de control en procesos relacionados.",
+  
+  #[3]
+  "Desarrollé mejoras en la gestión logística mediante el estudio y optimización de variables logísticas.",
+  "Se disminuyeron los errores logísticos en 30\\% y mejoraron los resultados en 20\\% al mejorar el cubicaje del transporte.",
+  
+  #[2]
+  "Gestioné y apoyé en la migración de sellers e información en el proyecto de transformación digital a Falabella.com.",
+  "Se optimizaron tiempos operativos hasta 90\\% y se recuperaron y activaron cuentas comerciales importantes.",
+  
+  #[4]
+  "Realicé un estudio de comportamiento de clientes basado en compras previas y preferencias como foco de crecimiento.",
+  "Se aumentaron los pedidos por cliente en 30\\%, el ticket promedio en 15\\% y se facilitó la introducción de nuevas marcas."
   
 )
 
@@ -405,7 +413,7 @@ english_project_bullets <- c(
 
   #[5] 
   "Created a market basket analysis model using Python to generate promotions in the supermarket vertical (mass consumption).",
-  "Increased purchase frequency by 20\\%, ticket size by 10\\%, and established significant commercial partnerships with suppliers."
+  "Increased purchase frequency by 20\\%, ticket size by 10\\% and established many commercial partnerships with suppliers."
   
 )
 
@@ -439,7 +447,7 @@ remote_project_bullets <- c(
 
   #[5] 
   "Created a market basket analysis model using Python to generate promotions in the supermarket vertical (mass consumption).",
-  "Increased purchase frequency by 20\\%, ticket size by 10\\%, and established significant commercial partnerships with suppliers."
+  "Increased purchase frequency by 20\\%, ticket size by 10\\% and established many commercial partnerships with suppliers."
  
 )
 
@@ -451,9 +459,9 @@ remote_project_bullets <- c(
 
 spanish_degrees <- tribble(
   ~degree, ~start, ~end, ~institution, ~location,
-  "Maestría en Administración de Negocios", 2018, 2018, "CENTRUM CATÓLICA", "Lima, Perú",
-  "Programa en Administración de Negocios Globales", 2018, 2018, "MAASTRICHT UNIVERSITY", "Maastricht, Países Bajos",
-  "Programa en Administración de Negocios Globales", 2018, 2018, "UNIVERSITY OF VICTORIA", "Victoria, B.C., Canadá",
+  "Maestría en Administración de Negocios", 2018, 2018, "CENTRUM - PONTIFICIA UNIVERSIDAD CATÓLICA DEL PERÚ", "Lima, Perú",
+  "Administración de Negocios Globales", 2018, 2018, "MAASTRICHT UNIVERSITY", "Maastricht, Países Bajos",
+  "Administración de Negocios Globales", 2018, 2018, "UNIVERSITY OF VICTORIA", "Victoria, B.C., Canadá",
   "Ingeniería Industrial", 2014, 2014, "PONTIFICIA UNIVERSIDAD CATÓLICA DEL PERÚ", "Lima, Perú",
 )
 
@@ -462,7 +470,7 @@ spanish_certifs <- tribble(
   "\\textbf{Google Data Analytics} | Google | 2021",
   "\\textbf{Google Project Management} | Google | 2021",
   "\\textbf{Especialización en Deep Learning} | DeepLearning.AI | 2020",
-  "\\textbf{Analítica de Negocios y Gestión de la Información} | Centrum Católica | 2016"
+  "\\textbf{Analítica de Negocios y Gestión de la Información} | CENTRUM - Pontificia Universidad Católica del Perú | 2016"
 )
 
 spanish_teaching <- tribble(
@@ -475,14 +483,14 @@ spanish_teaching <- tribble(
 
 spanish_skills <- tribble(~skill,
         "\\textbf{Idiomas:} Inglés, Español, Portugués",
-        "\\textbf{Data Science / Machine Learning:} SQL, Python (pandas, numpy, TensorFlow), R (tidyverse)",
-        "\\textbf{IDEs:} Visual Studio Code, RStudio, Google Colab, Jupyter Notebooks",
-        "\\textbf{Herramientas colaborativas:} Google Docs, Trello, Asana, Slack, Teams",
-        "\\textbf{Herramientas de visualización:} Looker, Tableau, Data Studio, Power BI",
-        "\\textbf{Herramientas CRM / Soporte:} Salesforce, Freshdesk, Jira, Kustomer",
-        "\\textbf{Cloud computing:} Google Cloud, Amazon Web Services, Microsoft Azure",
-        "\\textbf{Otros:} Docker, Git, Airflow, Spark, Regex, LaTeX, Markdown, DAX",
-        "\\textbf{ERPs:} SAP, Oracle",
+        "\\textbf{Gestión de proyectos:} Metodologías ágiles, Scrum, Kanban",
+        "\\textbf{Gestión financiera:} Gestión de P\\&L, análisis financiero y presupuestario, control de costos ",
+        "\\textbf{Gestión estratégica y operativa:} Gestión del cambio, transformación digital, optimización de cadena de suministro",
+        "\\textbf{Gestión comercial y de marketing:} Estrategias comerciales y de marketing, gestión de proveedores, análisis de mercado",
+        "\\textbf{Análisis de datos / Machine Learning:} SQL, Python (pandas, numpy, scikit-learn, TensorFlow), R (tidyverse, shiny)",
+        "\\textbf{Visualización de datos / IDEs:} Looker, Tableau, Power BI, Visual Studio Code, RStudio, Colab, Jupyter Notebooks",
+        "\\textbf{Herramientas colaborativas / CRM / ERP:} Google Docs, Trello, Asana, Slack, Teams, Salesforce, Jira, SAP, Oracle",
+        "\\textbf{Cloud / Otros:} Google Cloud, Amazon Web Services, Microsoft Azure, Docker, Kubernetes, Airflow, Git, Spark, Regex, DAX",
 )
 
 spanish_soft_skills <- tribble(~skill,
@@ -663,10 +671,12 @@ if (lang == "English") {
 \thispagestyle{empty}
 
 \smallskip
-<!--
+
+\vspace{-0.5cm}
+
 \hspace{0.25cm}\color{black}{\Large\faInfoCircle}\hspace{0.25cm}\section{`r sections[1]`}
 
-\vspace{0cm}
+\vspace{-0.25cm}
 
 ```{r summary, results='asis'}
 tribble(~description,
@@ -676,11 +686,11 @@ tribble(~description,
         tabular()
 ```
 
-\vspace{0cm}
--->
+\vspace{-0.375cm}
+
 \hspace{0.25cm}\color{black}{\Large\faBriefcase}\hspace{0.25cm}\section{`r sections[2]`}
 
-\vspace{-0.05cm}
+\vspace{-0.375cm}
 
 ```{r experience, results='asis'}
 tribble(~position, ~start, ~end,
@@ -688,16 +698,16 @@ tribble(~position, ~start, ~end,
 # Nota: Si hay error aquí es por los putos porcentajes        
         
         # Position
-        title(titles[1]), 2021, NA,
-        company(companies[1]), 2021, NA,
-        bullet(bullets[1]), 2021, NA,
-        bullet(bullets[2]), 2021, NA,
-        bullet(bullets[3]), 2021, NA,
-        bullet(bullets[4]), 2021, NA,
-        bullet(bullets[5]), 2021, NA,
-        bullet(bullets[6]), 2021, NA,
-        bullet(bullets[7]), 2021, NA,
-        "\\tiny", 2021, NA,
+        title(titles[1]), 2021, 2024,
+        company(companies[1]), 2021, 2024,
+        bullet(bullets[1]), 2021, 2024,
+        bullet(bullets[2]), 2021, 2024,
+        bullet(bullets[3]), 2021, 2024,
+        bullet(bullets[4]), 2021, 2024,
+        bullet(bullets[5]), 2021, 2024,
+        bullet(bullets[6]), 2021, 2024,
+        bullet(bullets[7]), 2021, 2024,
+        "\\tiny", 2021, 2024,
 
         # Position
         title(titles[2]), 2021, 2021,
@@ -728,7 +738,14 @@ tribble(~position, ~start, ~end,
         bullet(bullets[20]), 2018, 2019,
         bullet(bullets[21]), 2018, 2019,
         "\\tiny", 2018, 2019,
-        
+
+        # Position
+        title(titles[5]), 2013, 2018,
+        company(companies[5]), 2013, 2018,        
+        bullet(bullets[22]), 2013, 2018,
+        bullet(bullets[23]), 2013, 2018,
+        "\\tiny", 2013, 2018,
+
         ) %>%
         arrange(-start) %>%
         mutate(end = replace_na(as.character(end), "")) %>%
@@ -749,11 +766,11 @@ tribble(~position, ~start, ~end,
         tabular()
 ```
 
-\vspace{-0.05cm}
+\vspace{-0.375cm}
 
 \hspace{0.25cm}\color{black}{\Large\faGraduationCap}\hspace{0.25cm}\section{`r sections[3]`}
 
-\vspace{-0.05cm}
+\vspace{-0.25cm}
 
 ```{r education, results='asis'}
 tribble(~degree, ~start, ~end,
@@ -800,11 +817,11 @@ tribble(~degree, ~start, ~end,
         tabular()
 ```
 
-\vspace{-0.05cm}
+\vspace{-0.5cm}
 
 \hspace{0.25cm}\color{black}{\Large\faUniversity}\hspace{0.25cm}\section{`r sections[4]`}
 
-\vspace{-0.05cm}
+\vspace{-0.10cm}
 
 ```{r certificates, results='asis'}
 tribble(~degree,
