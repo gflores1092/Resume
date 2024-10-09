@@ -1,7 +1,7 @@
 ---
 docname: Curriculum Vitae
 name: |
-  | \huge\textbf{Gera Flores Sempertegui}
+  | \huge\textbf{Gerardo Flores Sempertegui}
 #profilepic: "foto.png"
 position: |
   | \scriptsize INDUSTRIAL ENGINEER MBA | E-COMMERCE | MANAGEMENT | STRATEGY | OPERATIONS
@@ -9,10 +9,10 @@ position: |
 #  | \normalfont\scriptsize\faMapMarker\hspace{0.1cm}{\scriptsize San Martin 590, Miraflores, Lima, Peru}
 phone: (+51) 948425000
 email: "gflores1092@gmail.com"
-linkedin: gflores1092
+#linkedin: gflores1092
 #github: gflores1092
 #aboutme: |
-#  | \normalfont{Líder ejecutiva con más de 10 años de trayectoria en e-commerce, tecnología y startups. Experta en gestión y comercial con sólidas habilidades técnicas. Preparada para roles de alta dirección, capaz de liderar equipos grandes y comprometida con la innovación y el crecimiento en entornos dinámicos. Reconocida por ser una profesional data driven con proyectos e iniciativas de alto impacto.}
+#  | \normalfont{Líder ejecutivo con más de 10 años de trayectoria en e-commerce, tecnología y startups. Experta en gestión y comercial con sólidas habilidades técnicas. Preparado para roles de alta dirección, capaz de liderar equipos grandes y comprometida con la innovación y el crecimiento en entornos dinámicos. Reconocida por ser una profesional data driven con proyectos e iniciativas de alto impacto.}
 # | \normalfont{Executive leader with over 10 years of experience in e-commerce, technology, and startups. Expert in management and commercial operations with strong technical skills. Prepared for senior management roles, capable of leading large teams, and committed to innovation and growth in dynamic environments. Recognized as a data driven professional with high impact projects and initiatives.}
 ##www: gflores1092.carrd.co
 headcolor: 414141
@@ -42,7 +42,7 @@ library(tidyverse)
 
 ```{r}
 # Select the language (English or Spanish)
-lang <- "English"  # Change to "Spanish" for the Spanish version
+lang <- "Spanish"  # Change to "Spanish" for the Spanish version
 ```
 
 ```{r}
@@ -173,7 +173,7 @@ remote_sections <- c(
 # Spanish
 
 spanish_summary <- c(
-  "Líder ejecutiva con más de 10 años de trayectoria en e-commerce, tecnología y startups. Experta en gestión y desarrollo comercial, con destacada capacidad en liderazgo estratégico y sólidas habilidades técnicas. Preparada para roles de alta dirección, capaz de liderar grandes equipos y comprometida con la innovación y el crecimiento en entornos dinámicos. Reconocida por su enfoque orientado a objetivos, con un historial comprobado de proyectos e iniciativas de alto impacto."
+  "Líder ejecutivo con más de 10 años de trayectoria en e-commerce, tecnología y startups. Experto en gestión y desarrollo comercial, con destacada capacidad en liderazgo estratégico y sólidas habilidades técnicas. Preparado para roles de alta dirección, capaz de liderar grandes equipos y comprometida con la innovación y el crecimiento en entornos dinámicos. Reconocido por su enfoque orientado a objetivos, con un historial comprobado de proyectos e iniciativas de alto impacto."
 )
 
 # English
@@ -195,6 +195,7 @@ remote_summary <- c(
 # Spanish
 
 spanish_titles <- c(
+                    "Data & Analytics Manager",
                     "Head of Operations", 
                     "Logistics Performance Manager", 
                     "Growth Marketing Lead", 
@@ -203,7 +204,8 @@ spanish_titles <- c(
                     )
 
 spanish_companies <- c(
-                      "FALABELLA.COM", 
+                      "MEDIALABTECH",
+                      "FALABELLA", 
                       "PEDIDOSYA", 
                       "GLOVO", 
                       "GLOVO",
@@ -211,37 +213,46 @@ spanish_companies <- c(
                       )
 
 spanish_bullets <- c(
-  
+
   #[1]
+  "A.",
+  "B.",
+  "C.",
+  "D.",
+  #"Gestioné presupuestos, control de gastos, transacciones contables y el P\\&L, asegurando el crecimiento y rentabilidad.",
+  #"Lideré proyectos con los equipos de producto, proyectos, comercial y tecnología para garantizar la excelencia operativa.",
+  #"Lideré iniciativas comerciales y capacitaciones para eventos como Cyber Days logrando impactos en ventas hasta en 15\\%.",
+    
+  #[2]
   "Lideré un equipo de 30 personas responsable de la logística, analítica, finanzas y soporte comercial a clientes y vendedores.",
   "Estandaricé y optimicé procesos operativos en Falabella, Tottus, Sodimac y Linio, mejorando la eficiencia operativa en 20\\%.",
   "Impulsé la experiencia de clientes y sellers, aumentando el CSAT en 15\\% y NPS en 20\\% con estrategias customer centric.",
   "Desarrollé, ejecuté y gestioné la estrategia de recuperación de cuentas por cobrar recuperando hasta S/. 8 millones.",
   "Gestioné presupuestos, control de gastos, transacciones contables y el P\\&L, asegurando el crecimiento y rentabilidad.",
   "Lideré proyectos con los equipos de producto, proyectos, comercial y tecnología para garantizar la excelencia operativa.",
-  "Lideré iniciativas comerciales y capacitaciones para eventos como Cyber Days logrando impactos en ventas hasta en 15\\%.",
+  #"Lideré iniciativas comerciales y capacitaciones para eventos como Cyber Days logrando impactos en ventas hasta en 15\\%.",
   
-  #[2]
+  #[3]
   "Lideré un equipo de 5 personas a cargo de la excelencia operativa y el soporte al cliente, socios y repartidores.",
   "Desarrollé estrategias operativas, reduciendo tiempos de entrega hasta en 30\\% y optimizando los recursos en 20\\%.",
   "Implementé estrategias para la expansión de operaciones logísticas en nuevas ciudades, aumentando la cobertura en 25\\%.",
   "Incrementé las entregas on-time en 30\\% mediante la optimización de predicción de la demanda, zonas de servicio y rutas.",
-  "Establecí y monitoreé 12 KPIs operativos, logrando un cumplimiento del 95\\% de los objetivos de desempeño establecidos.",
+  #"Establecí y monitoreé 12 KPIs operativos, logrando un cumplimiento del 95\\% de los objetivos de desempeño establecidos.",
   
-  #[3]
+  #[4]
   "Lideré un equipo multifuncional a cargo de alianzas comerciales, adquisición y retención de clientes y análisis de churn.",
   "Realicé promociones y recomendaciones data driven, reduciendo el churn en 20\\% y aumentando la adquisición en 25\\%.",
   "Gestioné alianzas estratégicas para mejorar la visibilidad y alcance en el mercado, impulsando su expansión en 30\\%.",
   "Diseñé y ejecuté campañas específicas que impulsaron el aumento de los ingresos en 20\\% y del ticket promedio en 10\\%.",
-  "Mejoré la UX mediante la optimización del customer journey, aumentando user engagement en 25\\% y conversión en 15\\%.",
+  #"Mejoré la UX mediante la optimización del customer journey, aumentando user engagement en 25\\% y conversión en 15\\%.",
   
-  #[4]
+  #[5]
   "Lideré un equipo data driven para proponer proyectos, estandarizar procesos y generar desarrollos en toda la compañía.",
   "Lideré proyectos de detección de fraudes, monetización de datos y desarrollo de socios, aumentando los ingresos en 20\\%.",
   "Diseñé y ejecuté estrategias de pricing dinámico basadas en demanda y distancias, optimizando la rentabilidad en 20\\%.",
   "Diseñé soluciones, modelos predictivos y automatizaciones usando SQL, R y Python aumentando en 40\\% la eficiencia.",
   
-  #[5]
+  #[6]
   "Consultora de negocios en pequeñas y medianas empresas (pymes) y docente de alumnos de pregrado y postgrado.",
   "En áreas de experiencia del cliente, finanzas y logística en empresas como ENTEL, GOODYEAR, FLSMIDTH y METSO."
 
@@ -250,6 +261,7 @@ spanish_bullets <- c(
 # English
 
 english_titles <- c(
+                    "Data & Analytics Manager",
                     "Head of Operations", 
                     "Logistics Performance Manager", 
                     "Growth Marketing Lead", 
@@ -258,6 +270,7 @@ english_titles <- c(
                     )
 
 english_companies <- c(
+                      "MEDIALABTECH",
                       "FALABELLA.COM",
                       "PEDIDOSYA",
                       "GLOVO",
@@ -305,6 +318,7 @@ english_bullets <- c(
 # Remote
 
 remote_titles <- c(
+                    "Data & Analytics Manager",
                     "Head of Operations",
                     "Logistics Performance Manager", 
                     "Growth Marketing Lead", 
@@ -312,6 +326,7 @@ remote_titles <- c(
                     )
 
 remote_companies <- c(
+                      "MEDIALABTECH",
                       "FALABELLA.COM", 
                       "PEDIDOSYA", 
                       "GLOVO", 
@@ -700,54 +715,66 @@ tribble(~description,
 tribble(~position, ~start, ~end,
 
 # Nota: Si hay error aquí es por los putos porcentajes        
+
+        # Position
+        title(titles[1]), 2024, NA,
+        company(companies[1]), 2024, NA,
+        bullet(bullets[1]), 2024, NA,
+        bullet(bullets[2]), 2024, NA,
+        bullet(bullets[3]), 2024, NA,
+        bullet(bullets[4]), 2024, NA,
+        #bullet(bullets[5]), 2024, NA,
+        #bullet(bullets[6]), 2024, NA,
+        #bullet(bullets[7]), 2024, NA,
+        "\\tiny", 2024, NA,
         
         # Position
-        title(titles[1]), 2021, 2024,
-        company(companies[1]), 2021, 2024,
-        bullet(bullets[1]), 2021, 2024,
-        bullet(bullets[2]), 2021, 2024,
-        bullet(bullets[3]), 2021, 2024,
-        bullet(bullets[4]), 2021, 2024,
+        title(titles[2]), 2021, 2024,
+        company(companies[2]), 2021, 2024,
         bullet(bullets[5]), 2021, 2024,
         bullet(bullets[6]), 2021, 2024,
         bullet(bullets[7]), 2021, 2024,
+        bullet(bullets[8]), 2021, 2024,
+        bullet(bullets[9]), 2021, 2024,
+        bullet(bullets[10]), 2021, 2024,
+        #bullet(bullets[11]), 2021, 2024,
         "\\tiny", 2021, 2024,
 
         # Position
-        title(titles[2]), 2021, 2021,
-        company(companies[2]), 2021, 2021,
-        bullet(bullets[8]), 2021, 2021,
-        bullet(bullets[9]), 2021, 2021,
-        bullet(bullets[10]), 2021, 2021,
+        title(titles[3]), 2021, 2021,
+        company(companies[3]), 2021, 2021,
         bullet(bullets[11]), 2021, 2021,
         bullet(bullets[12]), 2021, 2021,
+        bullet(bullets[13]), 2021, 2021,
+        bullet(bullets[14]), 2021, 2021,
+        #bullet(bullets[15]), 2021, 2021,
         "\\tiny", 2021, 2021,
 
         # Position
-        title(titles[3]), 2020, 2021,
-        company(companies[3]), 2020, 2021,
-        bullet(bullets[13]), 2020, 2021,
-        bullet(bullets[14]), 2020, 2021,
+        title(titles[4]), 2020, 2021,
+        company(companies[4]), 2020, 2021,
         bullet(bullets[15]), 2020, 2021,
         bullet(bullets[16]), 2020, 2021,
         bullet(bullets[17]), 2020, 2021,
+        bullet(bullets[18]), 2020, 2021,
+        #bullet(bullets[19]), 2020, 2021,
         "\\tiny", 2020, 2021,
 
         # Position
-        title(titles[4]), 2018, 2019,
-        company(companies[4]), 2018, 2019,
+        title(titles[5]), 2018, 2019,
+        company(companies[5]), 2018, 2019,
         #bullet(bullets[17]), 2018, 2019,
-        bullet(bullets[18]), 2018, 2019,
         bullet(bullets[19]), 2018, 2019,
         bullet(bullets[20]), 2018, 2019,
         bullet(bullets[21]), 2018, 2019,
+        bullet(bullets[22]), 2018, 2019,
         "\\tiny", 2018, 2019,
 
         # Position
-        title(titles[5]), 2013, 2018,
-        company(companies[5]), 2013, 2018,        
-        bullet(bullets[22]), 2013, 2018,
+        title(titles[6]), 2013, 2018,
+        company(companies[6]), 2013, 2018,        
         bullet(bullets[23]), 2013, 2018,
+        bullet(bullets[24]), 2013, 2018,
         "\\tiny", 2013, 2018,
 
         ) %>%
